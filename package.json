@@ -1,0 +1,37 @@
+{
+  "name": "maintenance_tracker",
+  "version": "1.0.0",
+  "description": "The Maintenance Tracker is an appliction tht provides user with the ability to reach out to operations or repair department regarding repairs or maintenance.",
+  "main": "index.js",
+  "scripts": {
+    "test": "nodemon node_modules/.bin/mocha  ./server/test/test.js --exec babel-node",
+    "lint": "eslint */.js . --fix",
+    "start": "nodemon ./server/app.js --exec babel-node"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/affiong/maintenance-tracker.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/affiong/maintenance-tracker/issues"
+  },
+  "homepage": "https://github.com/affiong/maintenance-tracker#readme",
+  "dependencies": {
+    "babel-preset-env": "^1.7.0",
+    "body-parser": "^1.18.3",
+    "expect": "^22.4.3",
+    "express": "^4.16.3",
+    "mocha": "^5.1.1",
+    "morgan": "^1.9.0"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "chai": "^3.5.0",
+    "chai-http": "^2.0.1",
+    "eslint": "^4.19.1",
+    "eslint-config-airbnb-base": "^12.1.0",
+    "nodemon": "^1.17.4"
+  }
+}
