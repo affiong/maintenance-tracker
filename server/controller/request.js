@@ -56,6 +56,30 @@ class Request {
       success: true
     });
   }
-  }
+}
+
+ /**
+     * @method getRequestById
+     * @param {object} req //takes in a request parameter
+     * @param {object} res // takes in a responds parameter
+     * @returns {array} 
+    */
+   static getRequestById(req, res) {
+    
+    let allDbs = requestdb;
+    for (let i = 0; i < allDbs.length; i++) {
+        if (req.params.id === allDbs[i].UserID) {
+          res.status(201).send({
+            request: allDbs[i],
+            success: true,
+            message: "successfully requested"
+          })
+        }
+      }
+      return res.status(404).send({
+            success:false,
+            message: "couldn't find user id"
+          })
+}
 }
 export default Request;
