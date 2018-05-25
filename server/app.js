@@ -15,6 +15,8 @@ app.use(bodyParser.json());
 
 app.use('/api/v1',apiRoutes)
 
+app.get('/', (req, res) => res.send({message: "welcome to mTracker by Affiong"}).status(200);
+
 app.listen(port, () => {
   console.log('running on port 4000...');
 });
