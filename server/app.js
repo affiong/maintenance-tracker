@@ -1,7 +1,6 @@
 import express from 'express';
 import bodyParser from 'body-parser';
 import logger from 'morgan';
-// import request from './controller/request';
 import apiRoutes from './routes'; 
 
 

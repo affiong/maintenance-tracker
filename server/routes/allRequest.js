@@ -1,11 +1,13 @@
 import express from 'express';
-import requestController from '../controller/request';
+import requestController from '../controller/requestController';
+
+const requestControl = new requestController;
 
 const requestRoute = express.Router();
 
-requestRoute.get('/', requestController.getRequest);
-requestRoute.post('/', requestController.createRequest); 
-requestRoute.get('/:id', requestController.getRequestById);
-requestRoute.put('/:id', requestController.modifyRequestById);
+requestRoute.get('/requests', requestControl.getRequest);
+requestRoute.post('/requests', requestControl.createRequest);
+requestRoute.get('/requests/:id', requestControl.getRequestById);
+requestRoute.put('/requests/:id', requestControl.modifyRequestById);
 
 export default requestRoute;

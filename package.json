@@ -4,7 +4,7 @@
   "description": "The Maintenance Tracker is an appliction tht provides user with the ability to reach out to operations or repair department regarding repairs or maintenance.",
   "main": "index.js",
   "scripts": {
-    "test": "nodemon node_modules/.bin/mocha  ./server/test/test.js --exec babel-node",
+    "test": "mocha --require babel-register --timeout 50000 ./server/test/*.js --exit",
     "lint": "eslint */.js . --fix",
     "start": "nodemon ./server/app.js --exec babel-node"
   },

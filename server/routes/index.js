@@ -5,7 +5,7 @@ import requestRoute from './AllRequest';
 
 const apiRoutes = express.Router();
 
-apiRoutes.use('/AllRequest', requestRoute);
+apiRoutes.use('/users', requestRoute);
 
 
 
